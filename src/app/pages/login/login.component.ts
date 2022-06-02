@@ -13,6 +13,8 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
+
+// redireciona para a pagina de autorização de conta do usuario.
   abrirPaginaLogin(){
     window.location.href = this.spotifyService.obterUrlLogin()
   }
