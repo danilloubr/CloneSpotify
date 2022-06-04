@@ -11,10 +11,11 @@
     width: 100%;
     height: 100%;
     flex-direction: column;
-    justify-content: space-around;
+    // justify-content: space-around;
 
     img {
         width: 40%;
+        padding-bottom: 40px;
     }
 
     button {
@@ -25,8 +26,18 @@
         color: white;
         border: 0;
         cursor: pointer;
-        font-size: 1.5rem;
+        // font-size: 1.5rem;    
+        transition: all ease-out 0.5s !important;   
     }
+
+    button {
+        &:hover {
+            
+            transition: all ease-out 0.5s !important;
+            background-color: rgb(113, 190, 62) !important;
+        }
+    }
+
 }
 
 }
