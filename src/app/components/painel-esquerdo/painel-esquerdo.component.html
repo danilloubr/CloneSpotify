@@ -1,0 +1,32 @@
+<div class="menus flex">
+    <div class="image-container flex flex-center">
+        <img src="assets/images/spotify-logo.png" alt="logo-spotify">
+    </div>
+    <div class="menu-container flex opcoes">
+        <app-botao-menu [descricao]="'Home'" [selecionado]="menuSelecionado === 'Home'" (click)="botaoClique('Home')">
+            <fa-icon [icon]="iconeHome"></fa-icon>
+        </app-botao-menu>
+        <app-botao-menu [descricao]="'Pesquisar'" [selecionado]="menuSelecionado === 'Pesquisar'" (click)="botaoClique('Pesquisar')">
+            <fa-icon [icon]="iconePesquisar"></fa-icon>
+        </app-botao-menu>
+        <app-botao-menu [descricao]="'Artistas'" [selecionado]="menuSelecionado === 'Artistas'" (click)="botaoClique('Artistas')">
+             <fa-icon [icon]="iconeArtirtas"></fa-icon>
+        </app-botao-menu>
+    </div>
+
+    <div class="menu-container flex">
+        <span class="playlist-titulo">
+            PLAYLIST
+        </span>
+
+        <div class="playlist-scroll">
+            <app-botao-menu *ngFor="let item of playList" [descricao]="item.nome" [selecionado]="menuSelecionado === item.nome" (click)="botaoClique(item.nome)">
+                <fa-icon [icon]="iconePlaylist"></fa-icon>
+            </app-botao-menu>
+        </div>
+    </div>
+
+</div>
+<div class="usuario-info">
+
+</div>
