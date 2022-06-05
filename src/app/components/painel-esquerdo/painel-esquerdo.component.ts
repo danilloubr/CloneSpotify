@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { faGuitar, faHome, faMusic, faSearch } from '@fortawesome/free-solid-svg-icons';
 import { IPlaylist } from 'src/app/interfaces/IPlaylist';
 import { SpotifyService } from 'src/app/services/spotify.service';
@@ -19,7 +20,10 @@ export class PainelEsquerdoComponent implements OnInit {
 
   playList: IPlaylist[] = []
 
-  constructor( private spotifyService: SpotifyService) { }
+  constructor( 
+    private spotifyService: SpotifyService,
+    private router: Router
+    ) { }
 
   ngOnInit(): void {
     this.buscarPlayList()
@@ -30,8 +34,15 @@ export class PainelEsquerdoComponent implements OnInit {
     console.log("lista:", this.playList)
   }
 
-  botaoClique(event: string){
-this.menuSelecionado = event
+  botaoClique(event: string) {
+    this.menuSelecionado = event
+    if (event === "Home") {
+      this.router.navigateByUrl("player/home")
+    } else if (event === "Pesquisar") {
+      this.router.navigateByUrl("player/pesquisar")
+    } else if (event === "Artistas") {
+      this.router.navigateByUrl("player/artistas")
+    }
   }
 
 }
