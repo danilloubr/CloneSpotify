@@ -14,9 +14,7 @@ export class AutenticadoGuard implements CanLoad {
     ){
 
   }
-  canLoad(
-    route: Route,
-    segments: UrlSegment[]): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
+  canLoad(route: Route,segments: UrlSegment[]): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
 
     const token = localStorage.getItem("token")
     if (!token) {

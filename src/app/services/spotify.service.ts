@@ -89,6 +89,11 @@ export class SpotifyService {
     await this.spotifyApi.skipToNext()
   }
 
+  async obterMusicaAtual(): Promise<IMusicaCurtida>{
+    const musicaSpotify = await this.spotifyApi.getMyCurrentPlayingTrack();
+    return SpotifyMusicasParaMusica(musicaSpotify.item)
+  }
+
 
   sair(){
     localStorage.clear()
