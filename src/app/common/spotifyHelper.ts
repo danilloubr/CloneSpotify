@@ -3,7 +3,7 @@ import { IArtirta } from "../interfaces/IArtista";
 import { IMusicaCurtida } from "../interfaces/IMusicaCurtida";
 import { IPlaylist } from "../interfaces/IPlaylist";
 import { IUsuario } from "../interfaces/IUsuarios";
-import { newMusica } from "./factory";
+import { newMusica, newPlaylist } from "./factory";
 
 export function SpotifyUserParaUsuario(user: SpotifyApi.CurrentUsersProfileResponse): IUsuario {
 
@@ -22,6 +22,19 @@ export function SpotifyPlayListParaPlayList(playlist: SpotifyApi.PlaylistObjectS
     }
 }
 
+export function SpotifySinglkePlaylistParaPlaylist(playlist: SpotifyApi.SinglePlaylistResponse) : IPlaylist{
+    if(!playlist){
+        return newPlaylist()
+    }
+
+    return {
+        id: playlist.id,
+        nome: playlist.name,
+        imagemUrl: playlist.images.shift().url,
+        musicas: []
+    }
+}
+
 export function SpotifyArtistaParaArtista(artista: SpotifyApi.ArtistObjectFull): IArtirta {
     return {
         id: artista.id,
@@ -35,7 +48,7 @@ export function SpotifyMusicasParaMusica(musica: SpotifyApi.TrackObjectFull): IM
     if(!musica)
     return newMusica()
 
-    
+
     const msParaMinutos = (ms: number) => {
         const data = addMilliseconds(new Date(0), ms)
         return format(data, "mm:ss")

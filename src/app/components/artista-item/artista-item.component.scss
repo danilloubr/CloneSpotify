@@ -1,0 +1,45 @@
+@import "../../../assets/styles/variaveis.scss";
+
+:host {
+    
+
+    .container {
+        align-items: center;
+        
+        
+        
+    }
+
+
+    img {
+        width: 30px;
+        border-radius: 50%;
+        padding-right: 5px;
+        margin-top: 5px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+
+        &:hover{
+            color: $cor-primaria;
+            transition: all 0.2s ease;
+        }
+    }
+
+    span {
+        color: $preto-transparente-70;
+        font-size: .9rem;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        font-weight: 400;
+    
+       
+        
+
+
+        &:hover{
+            color: $cor-primaria;
+            transition: all 0.2s ease;
+        }
+    }
+
+}

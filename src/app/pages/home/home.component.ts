@@ -34,13 +34,11 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   async buscarMusicasCurtidas(){
     this.musicas =  await this.spotifyService.buscarMusicasCurtidas()
-    console.log("MUSICAS", this.musicas)
   }
 
   obterMusicaAtual(){
     const sub = this.playerService.musicaAtual.subscribe(musica => {
       this.musicaAtual = musica
-      console.log("musica atual:", musica)
     })
 
     this.subs.push(sub)

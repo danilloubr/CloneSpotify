@@ -9,7 +9,7 @@ $h-desconsiderar: calc($h-spotify-logo + $h-menu-opcoes + $h-footer-user);
 
 
 :host {
-    max-width: 300px;
+    max-width: 263px;
     min-height: 100vh;
     overflow-y: hidden;
     display: flex;
@@ -21,7 +21,7 @@ $h-desconsiderar: calc($h-spotify-logo + $h-menu-opcoes + $h-footer-user);
         flex-grow: 1;
         flex-direction: column;
         height: 100%;
-        padding: 0px 40px;
+        padding: 0px 30px;
 
         .image-container {
             min-height: $h-spotify-logo;
