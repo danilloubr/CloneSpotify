@@ -8,7 +8,8 @@
     display: flex;
     flex-direction: column;
     box-shadow: 5px 6px 10px 1px #52545273;
-    max-height: 400px;
+    max-height:400px;
+    max-width: 194px;;
 
     .image {
         height: 65%;
@@ -18,6 +19,7 @@
         opacity: .8;
         border-radius: 10% 20%;
         transition: all 0.5s ease;
+        max-width: 175px;
 
         &:hover {
             opacity: 1;
