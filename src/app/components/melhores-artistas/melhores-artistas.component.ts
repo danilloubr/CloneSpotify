@@ -19,7 +19,6 @@ export class MelhoresArtistasComponent implements OnInit {
 
   async buscarTopArtista() {
     this.artistas = await this.spotigyService.buscarTopArtistas(5)
-    console.log("artirtas:", this.artistas)
   }
 
 }

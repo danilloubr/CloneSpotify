@@ -15,6 +15,8 @@ import { FormsModule } from '@angular/forms';
 import { MelhoresArtistasComponent } from 'src/app/components/melhores-artistas/melhores-artistas.component';
 import { ArtistaItemComponent } from 'src/app/components/artista-item/artista-item.component';
 import { PlayerCardComponent } from 'src/app/components/player-card/player-card.component';
+import { ListaMusicasComponent } from '../lista-musicas/lista-musicas.component';
+import { BannerComponent } from 'src/app/components/banner/banner.component';
 
 
 
@@ -30,7 +32,9 @@ import { PlayerCardComponent } from 'src/app/components/player-card/player-card.
     BuscasRecentesComponent,
     MelhoresArtistasComponent,
     ArtistaItemComponent,
-    PlayerCardComponent
+    PlayerCardComponent,
+    ListaMusicasComponent,
+    BannerComponent
   ],
   imports: [
     CommonModule,

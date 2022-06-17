@@ -1,0 +1,33 @@
+@import "../../../assets/styles/table.scss";
+
+:host {
+    display: flex;
+    justify-content: space-between;
+    
+
+    .lista {
+        padding: 0px 50px;
+        padding-bottom: 20px;
+        width: 100%;
+        max-height: 93vh;
+        overflow-y: hidden;
+        
+        &:hover {
+            overflow-y: scroll;
+        }
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
+    
+
+    .painel-direito {
+        height: 100vh;
+    }
+
+    .d-block {
+        display: block;
+    }
+}

@@ -31,7 +31,6 @@ export class PainelEsquerdoComponent implements OnInit {
 
   async buscarPlayList(){
     this.playList =  await this.spotifyService.buscarPlayListUsuario()
-    console.log("lista:", this.playList)
   }
 
   botaoClique(event: string) {
@@ -43,6 +42,11 @@ export class PainelEsquerdoComponent implements OnInit {
     } else if (event === "Artistas") {
       this.router.navigateByUrl("player/artistas")
     }
+  }
+
+  irParaPlaylist(playListId: string){
+    this.menuSelecionado = playListId
+    this.router.navigateByUrl(`player/lista/playlist/${playListId}`)
   }
 
 }
