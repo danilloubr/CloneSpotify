@@ -1,0 +1,12 @@
+<div class="container card p-10">
+    <div class="image" [style.background-image]="'url(' + musicaAtual.album.imagemUrl + ')'"></div>
+    <div class="controles">
+        <span> {{musicaAtual.titulo}}</span>
+        <div class="botoes">
+            <fa-icon [icon]="iconeVoltar" (click)="voltarMusica()"></fa-icon>
+            <fa-icon [icon]="iconePlay" (click)="playMusica()" *ngIf="tocando"></fa-icon>
+            <fa-icon [icon]="iconeStop" (click)="pauseMusica()" *ngIf="!tocando"></fa-icon>
+            <fa-icon [icon]="iconeProxima" (click)="proximaMusica()"></fa-icon>
+        </div>
+    </div>
+</div>

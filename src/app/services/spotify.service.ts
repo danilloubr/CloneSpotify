@@ -94,6 +94,24 @@ export class SpotifyService {
     return SpotifyMusicasParaMusica(musicaSpotify.item)
   }
 
+  async voltarMusica(){
+   await this.spotifyApi.skipToPrevious()
+  }
+
+  async proximaMusixca(){
+    await this.spotifyApi.skipToNext()
+  }
+
+  async playMusica(){
+    await this.spotifyApi.play()
+  }
+
+  async pauseMusica(){
+    await this.spotifyApi.pause()
+  }
+
+  
+
 
   sair(){
     localStorage.clear()

@@ -4,12 +4,16 @@
     display: flex;
     flex-direction: column;
     height: 100vh;
-    //forçar mostrar mesmo sem conteúdo em fase de dev
     min-height: 100vh;
     max-height: 100vh;
     max-width: 300px;
     width: 300px;
     padding: 40px 20px 20px 20px;
-    background-color: $cor-fundo2;
+
+    
+
+    .player {
+        flex-grow: 1;
+    }
 
 }

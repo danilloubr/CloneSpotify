@@ -16,16 +16,38 @@ export class PlayerService {
     this.obterMusicaAtual()
   }
 
-  async obterMusicaAtual() {
-    // clearTimeout(this.timerId)
-    const musica = await this.spotifyService.obterMusicaAtual()
-    // this.timerId = setInterval(() => {
-     this.definirMusicaAtual(musica)
-    // }, 3000)
+
+  async obterMusicaAtual(){
+    clearTimeout(this.timerId);
+
+    // Obtenho a musica
+    const musica = await this.spotifyService.obterMusicaAtual();
+    this.definirMusicaAtual(musica);
+
+    // Causo loop
+    this.timerId = setInterval(async () => {
+      await this.obterMusicaAtual();
+    }, 2000)
   }
 
 
   async definirMusicaAtual(musica: IMusicaCurtida) {
     this.musicaAtual.next(musica)
   }
+
+  async voltarMusica(){
+    await this.spotifyService.voltarMusica()
+  }
+
+  async proximaMusica(){
+    await this.spotifyService.proximaMusixca()
+  }
+  
+  async playMusica(){
+    await this.spotifyService.playMusica()
+  }
+  async pauseMusica(){
+    await this.spotifyService.pauseMusica()
+  }
+
 }

@@ -3,6 +3,7 @@
 :host {
     display: flex;
     justify-content: space-between;
+    
 
     .minhas-musicas {
         padding: 0px 50px;
@@ -23,7 +24,7 @@
     
 
     .painel-direito {
-        height: 100%;
+        height: 100vh;
     }
 
     .d-block {
