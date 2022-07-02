@@ -108,6 +108,12 @@ export class SpotifyService {
     await this.spotifyApi.pause()
   }
 
+
+  async pesquisar(pesquisa: string, tipo: any[] ) {
+   const result =  await this.spotifyApi.search(pesquisa, tipo)
+   return result.artists
+    }
+
   async obterPlayList(playListId: string, offset = 0, limit = 50) {
     const playListSpotify = await this.spotifyApi.getPlaylist(playListId)
     if (!playListSpotify) {
