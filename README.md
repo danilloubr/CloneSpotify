@@ -1,27 +1,52 @@
-# CloneSpotify
+<div style="display: flex">
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.7.
+![](/src/assets/images/spotify-logo.png)
+![](/public/img/icons/favicon-32x32.png)
+</div>
 
-## Development server
+# Clone Spotify
+### Projeto para base de estudos e aperfeiçoamento de caso.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+[Projeto Original - Cristian William Dev](https://www.youtube.com/watch?v=h6lPDQ8sEdU&list=PLMFE0Mu3BVy63bmSR92QbTR_rU576VOxg)
 
-## Code scaffolding
+Este projeto tem como finalidade a criação de um novo layout para o Spotify, bem assim como as funcionalidades em tempo real, usando a API Spotify Service, disponibilizada pela propria empresa em questão.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- O projeto foi construído com o Angular CLI, utilizando o framework Angular 8;
+- A camada de estilização foi desenvolvida com SASS.
 
-## Build
+## Features
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- [x] Login e autenticação
+- [x] Logout
+- [x] Tela inicial
+- [x] Tela Playlist
+- [x] PLayCard em tempo real
+- [ ] Pesquisa de artistas, albuns e músicas
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Instalação
+Utilize preferencialmente o **npm** para as instalações e scripts.
 
-## Running end-to-end tests
+```
+npm install
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### Desenvolvimento
+```
+ng serve
+```
 
-## Further help
+## Demo
+#### Tela Inicial
+![](/src/assets/apresentacao/tela-inicial.png)
+#### Tela Menu Principal
+![](/src/assets/apresentacao/tela-menu-inicial.png)
+#### Tela Playlist
+![](/src/assets/apresentacao/tela-playlist.png)
+#### Apresentação
+![](/src/assets/apresentacao/tela-gif.gif)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+### Modelo README 
+Modelo inspirado em projetos desenvolvidos por [Lincoln Modesto - Front End Developer](https://github.com/Lincoln-Modesto)
