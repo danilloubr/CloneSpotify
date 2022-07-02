@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SpotifyService } from 'src/app/services/spotify.service';
 
 @Component({
   selector: 'app-buscas-recentes',
@@ -13,7 +14,7 @@ export class BuscasRecentesComponent implements OnInit {
 
   campoPesquisa = ""
 
-  constructor() { }
+  constructor(private spotifyService: SpotifyService) { }
 
   ngOnInit(): void {
   }
@@ -24,7 +25,10 @@ export class BuscasRecentesComponent implements OnInit {
   }
 
   buscar(){
-    console.log("buscar:", this.campoPesquisa)
+    const teste = this.spotifyService.pesquisar(this.campoPesquisa, ["artist"]).then((result) => {
+console.log("resultado:", result)
+    })
+    console.log("teste aqui", teste)
   }
 
 }
